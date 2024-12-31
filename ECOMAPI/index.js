@@ -20,7 +20,8 @@ const uploadImgur = require("./routes/uploadImgur");
 dotenv.config();
 const port = process.env.PORT || 5000;
 const allowedOrigins = [
-  "https://clickart-admin.vercel.app"
+  "https://clickart-admin.vercel.app",
+  "https://clickart-backend.vercel.app/api/upload-imgur"
 ];
 const corsOptions = {
   origin: (origin, callback) => {
