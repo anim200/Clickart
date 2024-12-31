@@ -45,7 +45,7 @@ const connect = async () => {
     process.exit(1);  // Exit the process if DB connection fails
   }
 };
-app.use(cors());
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.use("/api/auth",authRoute);
