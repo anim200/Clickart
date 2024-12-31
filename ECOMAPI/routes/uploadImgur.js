@@ -25,8 +25,9 @@ const upload = multer({ storage });
 
 const uploadImgur = async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "https://clickart-admin.vercel.app");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
     console.log("imgur reached")
   if (req.method === "POST") {
     upload.single("file")(req, res, async (err) => {
