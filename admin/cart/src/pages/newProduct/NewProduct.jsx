@@ -3,6 +3,7 @@ import "./newProduct.css";
 import axios from "axios";
 import { addProducts } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
+import { publicRequest } from "../../redux/requestMethods";
 
 export default function NewProduct() {
   const [inputs, setInputs] = useState({});
@@ -31,7 +32,7 @@ export default function NewProduct() {
       data.append("file", file);
 
       try {
-        const res = await axios.post("http://clickart-backend.vercel.app/api/upload-imgur", data); // Update this endpoint based on your server
+         const res = await publicRequest.post("upload-imgur", data); // Update this endpoint based on your server
         imageUrl = res.data.url; // Get the Imgur URL from the response
         console.log("Uploaded image URL:", imageUrl);
       } catch (err) {
