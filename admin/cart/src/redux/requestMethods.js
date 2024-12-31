@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL="http://localhost:5000/api/"
+const BASE_URL="https://clickart-backend.vercel.app/"
 //const Token="8349303859430524";
 
 
