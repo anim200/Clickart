@@ -19,13 +19,21 @@ const uploadImgur = require("./routes/uploadImgur");
 
 dotenv.config();
 const port = process.env.PORT || 5000;
+const allowedOrigins = ["https://clickart-admin.vercel.app"];
+
 const corsOptions = {
-  origin: "*", // Allow all origins
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true); // Allow the origin
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true, // Allow credentials
 };
 
+app.use(cors(corsOptions)); // Apply CORS middleware
 
-app.use(cors(corsOptions));
 
 const connect = async () => {
   try {
