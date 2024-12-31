@@ -19,20 +19,11 @@ const uploadImgur = require("./routes/uploadImgur");
 
 dotenv.config();
 const port = process.env.PORT || 5000;
-const allowedOrigins = [
-  "*"
-
-];
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true); // Allow the origin
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: "*", // Allow all origins
   credentials: true, // Allow credentials
 };
+
 
 app.use(cors(corsOptions));
 
