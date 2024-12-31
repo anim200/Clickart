@@ -87,7 +87,7 @@ export default function Sidebar() {
             </li>
             <li className="sidebarListItem">
               <TimelineIcon className="sidebarIcon" />
-              Analytic
+           
             </li>
             <li className="sidebarListItem">
               <ReportIcon className="sidebarIcon" />
