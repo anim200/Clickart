@@ -1,0 +1,68 @@
+/* Set background for the full page */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa; /* Light Greenish Blue */
+  }
+  
+  /* Style the card */
+  .login-card {
+    background-color: #f1f8e9; /* Very light green */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .login-title {
+    color: #388e3c; /* Green */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields */
+  .login-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #81c784; /* Lighter Green border */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #388e3c;
+  }
+  
+  /* Focus styles */
+  .login-input:focus {
+    border-color: #66bb6a; /* Highlighted border when focused */
+    outline: none;
+  }
+  
+  /* Button styles */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #66bb6a; /* Slightly darker green */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  
+  /* Responsive styling for mobile */
+  @media (max-width: 600px) {
+    .login-card {
+      padding: 20px;
+      width: 80%;
+    }
+  }
+  
