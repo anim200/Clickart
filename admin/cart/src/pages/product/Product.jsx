@@ -90,7 +90,7 @@ export default function Product() {
         </div>
         <div className="productTopRight">
           <div className="productInfoTop">
-            <img src={imageSrc} alt="" className="productInfoImg" />
+            <img src={product.img} alt="" className="productInfoImg" />
             <span className="productName">{product?.title}</span>
           </div>
           <div className="productInfoBottom">
@@ -126,7 +126,7 @@ export default function Product() {
           </div>
           <div className="productFormRight">
             <div className="productUpload">
-              <img src={imageSrc} alt="" className="productUploadImg" />
+              <img src={product.img} alt="" className="productUploadImg" />
               <label>
                 <PublishIcon />
               </label>
