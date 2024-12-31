@@ -1,1 +1,12 @@
-
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://clickart-backend.vercel.app"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
