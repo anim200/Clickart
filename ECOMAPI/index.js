@@ -20,8 +20,8 @@ const uploadImgur = require("./routes/uploadImgur");
 dotenv.config();
 const port = process.env.PORT || 5000;
 const allowedOrigins = [
-  "https://clickart-admin.vercel.app",
-  "https://clickart-backend.vercel.app/api/upload-imgur"
+  "https://clickart-admin.vercel.app"
+
 ];
 const corsOptions = {
   origin: (origin, callback) => {
@@ -57,18 +57,7 @@ app.use("/api/checkout",stripeRoute);
 app.use("/productUpload", express.static(path.join(__dirname, "public/productUpload"))); // Serve uploaded images
 
 // Configure Multer for image uploads
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://clickart-admin.vercel.app");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
 
-  // Handle preflight requests
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
-  }
-  next();
-});
 
 app.use("/api/upload-imgur", uploadImgur);
 app.get('/', (req, res) => {
