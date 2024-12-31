@@ -31,7 +31,7 @@ export default function NewProduct() {
       data.append("file", file);
 
       try {
-        const res = await axios.post("http://localhost:5000/api/upload-imgur", data); // Update this endpoint based on your server
+        const res = await axios.post("https://clickart-backend.vercel.app/api/upload-imgur", data); // Update this endpoint based on your server
         imageUrl = res.data.url; // Get the Imgur URL from the response
         console.log("Uploaded image URL:", imageUrl);
       } catch (err) {
