@@ -129,7 +129,7 @@ const Product = () => {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/products/find/" + id
+          "https://clickart-backend.vercel.app/api/products/find/" + id
         );
         setProduct(res.data);
 
@@ -178,7 +178,7 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src={imageSrc} alt={product.title || "Product"} />
+          <Image src={`/images/${product.img}`} alt={product.title || "Product"} />
         </ImgContainer>
         <InfoContainer>
           <Title>{product.title}</Title>
