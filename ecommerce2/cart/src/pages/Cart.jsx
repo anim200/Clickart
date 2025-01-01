@@ -247,7 +247,7 @@ const Cart = () => {
         const makeRequest = async () => {
           try {
             // First, make the payment request
-            const res = await axios.post("http://localhost:5000/api/checkout/payment", {
+            const res = await axios.post("https://clickart-backend.vercel.app/api/checkout/payment", {
               tokenId: stripeToken.id,
               amount: cart.total * 100, // Stripe requires the amount in cents
             });
@@ -261,7 +261,7 @@ const Cart = () => {
             };
     
             // Send order data to the backend after successful payment
-            await axios.post("http://localhost:5000/api/orders", orderData);
+            await axios.post("https://clickart-backend.vercel.app/api/orders", orderData);
     
             handleClick();  // Navigate to success page after placing the order
           } catch (err) {
@@ -316,7 +316,7 @@ const Cart = () => {
                 {cart.products.map((product) => (
     <Product key={product._id}>
         <ProductDetail>
-        <Image src={imageSrcs[product._id] || `/images/${product.img}`} />
+        <Image src={`/images/${product.img}`} />
 
             <Details>
                 <ProductName><b>Product:</b>{product.title}</ProductName>
