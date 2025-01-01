@@ -126,7 +126,7 @@ export default function Product() {
           </div>
           <div className="productFormRight">
             <div className="productUpload">
-              <img src={product.img} alt="" className="productUploadImg" />
+              <img src={`/images/${product.img}`} alt="" className="productUploadImg" />
               <label>
                 <PublishIcon />
               </label>
