@@ -9,7 +9,7 @@ export default function Topbar() {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">Clickartttt</span>
+          <span className="logo">Clickartt</span>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
