@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const uploadImgur = async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://clickart-admin.vercel.app");
+    res.setHeader("Access-Control-Allow-Origin", "https://clickart-beta.vercel.app");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Allow-Credentials", "true");
