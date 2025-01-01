@@ -148,7 +148,7 @@ const Register = () => {
     setLoading(true); // Show the loader
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData, {
+      const response = await axios.post('https://clickart-backend.vercel.app/api/auth/register', formData, {
         headers: {
           'Content-Type': 'application/json', // JSON content
         },
