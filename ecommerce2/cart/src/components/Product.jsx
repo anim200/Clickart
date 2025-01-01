@@ -94,7 +94,7 @@ const Product = ({ item }) => {
   return (
     <Container>
       <Circle />
-      <Image src={imageSrc} alt={item?.title || "Product"} />
+      <Image src={`/images/${item.img}`} alt={item?.title || "Product"} />
       <Info>
         <Icon>
           <FavoriteBorderIcon />
