@@ -3,8 +3,8 @@ import { mobile } from "../responsive";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../redux/apiCalls";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
-// Container for the page with a light greenish gradient background
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -85,7 +85,7 @@ const Error = styled.span`
   font-size: 14px;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)` /* Styled Link from react-router-dom */
   text-decoration: none;
   font-size: 14px;
   color: #66bb6a;
@@ -117,7 +117,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
-  console.log(error);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -143,8 +142,7 @@ const Login = () => {
             Login
           </Button>
           {error && <Error>Something went wrong...</Error>}
-          
-          <Link href="/register">Create a new account</Link>
+          <StyledLink to="/register">Create a new account</StyledLink> {/* Updated Link */}
         </Form>
       </Wrapper>
     </Container>
