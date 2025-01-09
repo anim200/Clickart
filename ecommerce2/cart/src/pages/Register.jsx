@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirect
+import { useNavigate, Link } from 'react-router-dom'; // Import useNavigate and Link
 
 const Container = styled.div`
   display: flex;
@@ -103,7 +103,7 @@ const LoginLink = styled.div`
   margin-top: 20px;
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)` /* Styled Link from react-router-dom */
   color: #388e3c; /* Medium green */
   text-decoration: none;
 
@@ -233,7 +233,7 @@ const Register = () => {
 
           <LoginLink>
             <p>
-              Already have an account? <Link href="/login">Login</Link>
+              Already have an account? <StyledLink to="/login">Login</StyledLink> {/* Updated Link */}
             </p>
           </LoginLink>
         </form>
